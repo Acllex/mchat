@@ -30,4 +30,4 @@ jobs:
         SOURCE: "dist/" 
         REMOTE_HOST: "39.105.220.73"
         REMOTE_USER: "root"
-        TARGET: "/var/www/html/autodeploy/"
+        TARGET: "/www/admin/localhost_80/wwwroot/autodeploy/"
