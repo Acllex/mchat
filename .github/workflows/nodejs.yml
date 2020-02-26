@@ -26,8 +26,8 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.0.8
       env:
         SSH_PRIVATE_KEY: ${{ secrets.ALIYUN }}
-        ARGS: "-rltgoDzvO --delete" 
+        ARGS: "-rltgoDzvO --delete"
+        SOURCE: "dist/" 
         REMOTE_HOST: "39.105.220.73"
         REMOTE_USER: "root"
-        SOURCE: "dist/"
         TARGET: "/var/www/html/autodeploy/"
