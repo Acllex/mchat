@@ -36,4 +36,4 @@ jobs:
         # Source directory
         SOURCE: "dist/"
         # Target directory
-        TARGET: "/var/www/html/mchat/"
+        TARGET: "/var/www/html/autodeploy/"
