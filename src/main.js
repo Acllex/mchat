@@ -10,13 +10,7 @@ import 'u-reset.css';
 Vue.use(new VueSocketIO({
   debug: false,
   connection: 'http://127.0.0.1:7001',
-  options: { query: {username: store.state.user.uname} }
-  // vuex: {
-  //     store,
-  //     actionPrefix: 'SOCKET_',
-  //     mutationPrefix: 'SOCKET_'
-  // },
-  //options: { path: "/my-app/" } //Optional options
+  options: { query: {username: sessionStorage.getItem('token') || ''} }
 }))
 
 Vue.use(Vant);
