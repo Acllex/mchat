@@ -23,8 +23,8 @@ jobs:
       env:
         CI: true
     - name: Deploy
-      uses: easingthemes/ssh-deploy@v2.0.7
-      with:
+      uses: easingthemes/ssh-deploy@v2.0.8
+      env:
         SSH_PRIVATE_KEY: ${{ secrets.ALIYUN }}
         ARGS: "-rltgoDzvO --delete" 
         REMOTE_HOST: "39.105.220.73"
