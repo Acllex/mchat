@@ -160,8 +160,6 @@ export default {
     connect() {
      
     },
-    users(){
-    },
     res(val) {
       this.$store.dispatch("getMess", val);
     }
