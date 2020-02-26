@@ -22,18 +22,12 @@ jobs:
     - run: npm test
       env:
         CI: true
-    - name: ssh deploy
+    - name: Deploy
       uses: easingthemes/ssh-deploy@v2.0.8
-      with:
-        # Private Key
+      env:
         SSH_PRIVATE_KEY: ${{ secrets.ALIYUN }}
-        # Remote host
+        ARGS: "-avz --delete"
+        SOURCE: "dist/" 
         REMOTE_HOST: "39.105.220.73"
-        # Remote user
         REMOTE_USER: "root"
-        # Remote port
-        REMOTE_PORT: 22
-        # Source directory
-        SOURCE: "dist/"
-        # Target directory
         TARGET: "/var/www/html/mchat/"
